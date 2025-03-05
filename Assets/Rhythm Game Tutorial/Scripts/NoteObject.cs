@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class NoteObject : MonoBehaviour
@@ -7,6 +8,7 @@ public class NoteObject : MonoBehaviour
     public bool canBePressed;
     public KeyCode keyToPress;
     // Start is called before the first frame update
+     private bool isHit = false; 
     void Start()
     {
         
@@ -19,8 +21,22 @@ public class NoteObject : MonoBehaviour
         {
             if(canBePressed)
             {
+                isHit = true;
                 gameObject.SetActive(false);
-                GameManager.instance.NoteHit();
+                //GameManager.instance.NoteHit();
+                if (transform.position.y > 0.25f)
+                {
+                    Debug.Log("perfect hit");
+                    GameManager.instance.PerfectHit();
+                } else if (transform.position.y > 0.1f) {
+                    GameManager.instance.GoodHit();
+                    Debug.Log("good hit");
+                }
+                else if (transform.position.y > 0) 
+                {
+                    GameManager.instance.NormalHit();
+                    Debug.Log("normal hit");
+                }
             }
         }
     }
@@ -37,8 +53,12 @@ public class NoteObject : MonoBehaviour
     {
         if (other.tag == "Activator")
         {
-            canBePressed = false; 
-            GameManager.instance.NoteMissed();
+            if (!isHit)
+            {
+                canBePressed = false; 
+                GameManager.instance.NoteMissed();
+            }
+
         }
     }
 }
