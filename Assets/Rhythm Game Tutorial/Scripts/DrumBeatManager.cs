@@ -25,7 +25,7 @@ public class DrumBeatManager : MonoBehaviour
         OnClickPlay();
         foreach (var point in trackTimerLists_Dic.trackTimerLists)
         {
-          point.gameObject.transform.position = new Vector3(point.trackId, (bgm.time - point.timer*10),0);
+          point.gameObject.transform.position = new Vector3(point.trackId, (bgm.time - point.timer)*10,0);
         }
 
         // _cooldown -= Time.deltaTime;

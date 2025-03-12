@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public AudioSource theMusic;
     public bool startPlaying;
-    public BeatScroller theBS;
     public static GameManager instance;
     public int currentScore;
     public int currentCombo;
@@ -32,8 +30,6 @@ public class GameManager : MonoBehaviour
             if(Input.anyKeyDown)
             {
                 startPlaying = true;
-                theBS.hasStarted = true;
-                theMusic.Play();
             }
         }
     }
@@ -49,7 +45,6 @@ public class GameManager : MonoBehaviour
     public void NormalHit()
     {
         currentScore += scorePerNormalNote;        
-
         NoteHit();
     }
 

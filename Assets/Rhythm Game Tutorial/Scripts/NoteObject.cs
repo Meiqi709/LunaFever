@@ -12,7 +12,24 @@ public class NoteObject : MonoBehaviour
     public GameObject hitEffect, goodEffect, perfectEffect, missEffect;
     void Start()
     {
-        
+        float xPos = transform.position.x;
+
+        if (Mathf.Approximately(xPos, -1.5f))
+        {
+            keyToPress = KeyCode.D;
+        }
+        else if (Mathf.Approximately(xPos, -0.5f))
+        {
+            keyToPress = KeyCode.F;
+        }
+        else if (Mathf.Approximately(xPos, 0.5f))
+        {
+            keyToPress = KeyCode.J;
+        }
+        else if (Mathf.Approximately(xPos, 1.5f))
+        {
+            keyToPress = KeyCode.K;
+        }
     }
 
     // Update is called once per frame
@@ -25,22 +42,21 @@ public class NoteObject : MonoBehaviour
                 isHit = true;
                 gameObject.SetActive(false);
                 //GameManager.instance.NoteHit();
-                if (transform.position.y > 0.25f)
+                if (transform.position.y > 0f)
                 {
                     Debug.Log("perfect hit");
                     GameManager.instance.PerfectHit();
                     Instantiate(perfectEffect, transform.position, perfectEffect.transform.rotation);
-                } else if (transform.position.y > 0.1f) {
+                /*} else if (transform.position.y > 0.1f) {
                     GameManager.instance.GoodHit();
                     Debug.Log("good hit");
                     Instantiate(goodEffect, transform.position, goodEffect.transform.rotation);
-
                 }
                 else if (transform.position.y > 0) 
                 {
                     GameManager.instance.NormalHit();
                     Debug.Log("normal hit");
-                    Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);
+                    Instantiate(hitEffect, transform.position, hitEffect.transform.rotation);*/
 
                 }
             }
@@ -63,7 +79,8 @@ public class NoteObject : MonoBehaviour
             {
                 canBePressed = false; 
                 GameManager.instance.NoteMissed();
-                Instantiate(missEffect, transform.position, missEffect.transform.rotation);
+                //Instantiate(missEffect, transform.position, missEffect.transform.rotation);
+                gameObject.SetActive(false);
 
             }
 

@@ -115,7 +115,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBePressed: 0
-  keyToPress: 100
+  keyToPress: 0
   hitEffect: {fileID: 7497740331337242037, guid: 5b37a489e31f1c54e995ae6793b6105e, type: 3}
   goodEffect: {fileID: 4427746264451478862, guid: fe8c2b118e238b2438ab1ac955fa2388, type: 3}
   perfectEffect: {fileID: 2111285517671702799, guid: f90d6f8d0a37cb145829f26bf8bd298e, type: 3}

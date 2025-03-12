@@ -15,6 +15,7 @@ public class CreateFromTrackTimerData : MonoBehaviour
 
     private void Start()
     {
+        bgm.Pause();
         CreateNecks();
     }
 
@@ -35,20 +36,59 @@ public class CreateFromTrackTimerData : MonoBehaviour
         pNode.trackId = trackId;
         pNode.timer = timer;
         pNode.gameObject = Instantiate(pointPre);
+        NoteObject noteScript = pNode.gameObject.GetComponent<NoteObject>();
+
+    if (noteScript != null)
+    {
+        noteScript.keyToPress = GetKeyCodeFromTrackId(trackId);
+    }
+    else
+    {
+        Debug.LogError("NoteObject 脚本未找到，检查 Prefab 是否正确挂载！");
+    }
         tempTrackList.Add(pNode);
     }
 
-    private void Update()
+    private KeyCode GetKeyCodeFromTrackId(float trackId)
     {
+        switch (trackId)
+        {
+            case -1.5f: return KeyCode.D;
+            case -0.5f: return KeyCode.F;
+            case 0.5f:  return KeyCode.J;
+            case 1.5f:  return KeyCode.K;
+            default:    return KeyCode.None;
+        }
+    }
+
+
+    void OnClickPlay()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if(bgm.isPlaying)
+            {
+                bgm.Pause();
+            }
+            else{
+                bgm.Play();
+            }
+        }
+    }
+
+    void Update()
+    {
+        OnClickPlay();
         foreach (var item in tempTrackList)
         {
             // 使用 item 来访问 PointGameObject
-            item.gameObject.transform.position = new Vector3(item.trackId, (bgm.time - item.timer) * -15, 0);
+            item.gameObject.transform.position = new Vector3(item.trackId, (bgm.time - item.timer)*(-10), 0);
             // x 位置是根据 trackId 设置
             // y 位置是根据当前时间与音符时间的差值，乘以-15来控制掉落速度
             // 例如，如果 (20s - 1.02s) * -15 = -285，意味着音符的位置会更低
             // 负位置 (20s - 1.02s) * -15 = -285
             // 正位置 (0.5s - 1.02s) * -15 = 7.5
+            
         }
     }
 }
