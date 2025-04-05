@@ -23,7 +23,6 @@ public class PointData
     }
 }
 
-// 使用 [System.Serializable] 来确保可以序列化 PointGameObject
 [System.Serializable]
 public class PointGameObject : PointData
 {
