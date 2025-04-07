@@ -84,10 +84,11 @@ private void OnTriggerEnter2D(Collider2D other)
             if (!isHit)
             {
                 canBePressed = false; 
+                if(GameManager.Instance != null) {
                 GameManager.Instance.NoteMissed();
                 Instantiate(missEffect, transform.position, missEffect.transform.rotation);
                 gameObject.SetActive(false);
-                Debug.Log("missed note");
+                Debug.Log("missed note");}
             }
 
         }

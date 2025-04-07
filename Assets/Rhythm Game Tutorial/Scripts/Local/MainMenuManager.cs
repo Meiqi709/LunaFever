@@ -5,7 +5,7 @@ public class MainMenuManager : MonoBehaviour
 {
     public void LoadPlayScene()
     {
-        SceneManager.LoadScene("PlayScene");
+        SceneManager.LoadScene("SongSelectScene");
     }
 
     public void LoadPlayOnlineScene()
