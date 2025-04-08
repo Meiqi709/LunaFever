@@ -51,8 +51,6 @@ public class OnlineGameManager : NetworkBehaviour
         Instance = this;
         scoreText.text = "Score: 0";
         comboText.text = "Combo: 0";
-
-        totalNotes = FindObjectsOfType<NoteObject>().Length;
     }
 
     public override void OnNetworkSpawn()

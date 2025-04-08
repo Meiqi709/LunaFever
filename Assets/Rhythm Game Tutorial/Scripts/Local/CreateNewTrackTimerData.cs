@@ -9,7 +9,6 @@ public class CreateNewTrackTimerData : MonoBehaviour
     private float currentTrackId = -999f; 
     public GameObject pointPre;
     public AudioSource bgm;
-    private float _cooldown =0.05f;
     public TrackTimerLists_Dic trackTimerLists_Dic;
     // Start is called before the first frame update
     void Start()
