@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class CreateNewTrackTimerData : MonoBehaviour
 {
@@ -99,6 +101,26 @@ public class CreateNewTrackTimerData : MonoBehaviour
                 break;
             }
         AddPoint(currentTrackId, bgm.time);
+        SaveTrackDataToExistingFile(trackTimerLists_Dic);
+
     }
+
+
+
+    void SaveTrackDataToExistingFile(TrackTimerLists_Dic trackData)
+    {
+        if (trackData != null)
+        {
+            EditorUtility.SetDirty(trackData);  
+            AssetDatabase.SaveAssets();         
+            AssetDatabase.Refresh();            
+            Debug.Log("Track data saved to existing file.");
+        }
+        else
+        {
+            Debug.LogError("Track data is null.");
+        }
+    }
+
 
 } 

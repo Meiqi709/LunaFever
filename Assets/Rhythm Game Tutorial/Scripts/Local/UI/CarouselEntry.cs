@@ -11,11 +11,14 @@ using UnityEngine.SceneManagement;
 
         
         [Header("Interaction")] 
-        [SerializeField] private string levelNameToLoad;
+        [SerializeField] private string levelNameToLoad="PlayScene";
         
         public void Interact()
         {
-            SceneManager.LoadScene(levelNameToLoad);
+            SongPlayingManager.Instance.SelectedAudioClip = AudioClip;
+            SongPlayingManager.Instance.SelectedTrackData = trackData;
+
+            SceneManager.LoadScene("PlayScene");  
         }
     }
 

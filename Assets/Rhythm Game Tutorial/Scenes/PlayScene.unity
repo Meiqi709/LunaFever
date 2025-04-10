@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 394755402}
   - component: {fileID: 394755401}
   m_Layer: 0
-  m_Name: Monitoring
+  m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -794,7 +794,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: da35e08e9d0175b4bacfa4dcffbfdf28, type: 3}
+  m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: da35e08e9d0175b4bacfa4dcffbfdf28, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

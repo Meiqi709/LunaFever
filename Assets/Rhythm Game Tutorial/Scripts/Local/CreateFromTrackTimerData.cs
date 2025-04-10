@@ -15,6 +15,18 @@ public class CreateFromTrackTimerData : MonoBehaviour
 
     private void Start()
     {
+        if (SongPlayingManager.Instance == null)
+        {
+            return;
+        }
+
+        trackTimerLists_Dic = SongPlayingManager.Instance.SelectedTrackData;
+        bgm.clip = SongPlayingManager.Instance.SelectedAudioClip;
+
+        if (bgm.clip == null || trackTimerLists_Dic == null)
+        {
+            return;
+        }
         bgm.Pause();
         CreateNecks();
     }
