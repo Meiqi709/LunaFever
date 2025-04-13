@@ -12,6 +12,7 @@ public class CreateNewTrackTimerData : MonoBehaviour
     public GameObject pointPre;
     public AudioSource bgm;
     public TrackTimerLists_Dic trackTimerLists_Dic;
+    public bool isReady = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class CreateNewTrackTimerData : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         if (!isReady) return;
         OnClickPlay();
         foreach (var point in trackTimerLists_Dic.trackTimerLists)
         {
