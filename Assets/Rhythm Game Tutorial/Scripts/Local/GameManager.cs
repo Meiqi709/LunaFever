@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
             }
         } else
         {
-            if(!bgm.isPlaying && !resultScreen.activeInHierarchy)
+            if( bgm.time > 0f && bgm.time >= bgm.clip.length && !resultScreen.activeInHierarchy)
             {
                 resultScreen.SetActive(true);
                 normalsText.text = ""+normalHits;

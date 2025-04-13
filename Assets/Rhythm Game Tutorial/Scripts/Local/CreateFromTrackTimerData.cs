@@ -54,10 +54,7 @@ public class CreateFromTrackTimerData : MonoBehaviour
     {
         noteScript.keyToPress = GetKeyCodeFromTrackId(trackId);
     }
-    else
-    {
-        Debug.LogError("NoteObject 脚本未找到，检查 Prefab 是否正确挂载！");
-    }
+
         tempTrackList.Add(pNode);
     }
 

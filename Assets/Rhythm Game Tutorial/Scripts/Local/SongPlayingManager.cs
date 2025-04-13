@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SongPlayingManager : MonoBehaviour
 {
@@ -18,5 +19,10 @@ public class SongPlayingManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void LoadMainMenuScene()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

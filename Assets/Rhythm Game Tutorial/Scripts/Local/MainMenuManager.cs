@@ -18,6 +18,11 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene("SettingsScene");
     }
 
+    public void LoadChartEditor()
+    {
+        SceneManager.LoadScene("PartitionsEditeur");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
