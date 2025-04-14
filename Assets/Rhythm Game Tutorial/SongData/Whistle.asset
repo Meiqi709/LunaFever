@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 885757af370acef48ac63d024c1a0280, type: 3}
-  m_Name: Whistle
+  m_Name: whistle
   m_EditorClassIdentifier: 
   <EntryGraphic>k__BackingField: {fileID: 529254481639085863, guid: 4fe8e89948d546a48b5c6129c2b14d4b, type: 3}
-  <Headline>k__BackingField: Whistle
+  <Headline>k__BackingField: whistle
   <AudioClip>k__BackingField: {fileID: 8300000, guid: 71be2c13d1436144286dbf64bef8a778, type: 3}
   <trackData>k__BackingField: {fileID: 11400000, guid: 10262aa7261665340a4d569aba399296, type: 2}
-  levelNameToLoad: 
+  levelNameToLoad: PlayScene

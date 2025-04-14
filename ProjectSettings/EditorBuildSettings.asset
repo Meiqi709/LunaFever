@@ -9,22 +9,22 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Rhythm Game Tutorial/Scenes/EcranAccueil.unity
+    guid: 6d445ae8ce55887439a36705ccebc69d
+  - enabled: 1
     path: Assets/Rhythm Game Tutorial/Scenes/MainMenu.unity
     guid: bf768f76a4495c1419a7dc24d48a34f1
   - enabled: 1
-    path: Assets/Rhythm Game Tutorial/Scenes/EcranAccueil.unity
-    guid: 6d445ae8ce55887439a36705ccebc69d
+    path: Assets/Rhythm Game Tutorial/Scenes/SongSelectScene.unity
+    guid: 59eb9aea06c1a4e49a4541a0a8d27042
+  - enabled: 1
+    path: Assets/Rhythm Game Tutorial/Scenes/PlayScene.unity
+    guid: a7efac3f0da73e7439004acd29203987
   - enabled: 1
     path: Assets/Rhythm Game Tutorial/Scenes/PartitionsEditeur.unity
     guid: 3d5986b1e5510054d95c1e2840681fc5
   - enabled: 1
     path: Assets/Rhythm Game Tutorial/Scenes/PlayOnlineScene.unity
     guid: c7dab3e1d72125c43ab42f7bad80ab85
-  - enabled: 1
-    path: Assets/Rhythm Game Tutorial/Scenes/PlayScene.unity
-    guid: a7efac3f0da73e7439004acd29203987
-  - enabled: 1
-    path: Assets/Rhythm Game Tutorial/Scenes/SongSelectScene.unity
-    guid: 59eb9aea06c1a4e49a4541a0a8d27042
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
