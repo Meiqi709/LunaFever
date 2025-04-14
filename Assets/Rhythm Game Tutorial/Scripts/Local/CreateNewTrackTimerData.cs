@@ -103,13 +103,13 @@ public class CreateNewTrackTimerData : MonoBehaviour
                 break;
             }
         AddPoint(currentTrackId, bgm.time);
-        SaveTrackDataToExistingFile(trackTimerLists_Dic);
+        //SaveTrackDataToExistingFile(trackTimerLists_Dic);
 
     }
 
 
 
-    void SaveTrackDataToExistingFile(TrackTimerLists_Dic trackData)
+/*     void SaveTrackDataToExistingFile(TrackTimerLists_Dic trackData)
     {
         if (trackData != null)
         {
@@ -122,7 +122,7 @@ public class CreateNewTrackTimerData : MonoBehaviour
         {
             Debug.LogError("Track data is null.");
         }
-    }
+    } */
 
 
 } 

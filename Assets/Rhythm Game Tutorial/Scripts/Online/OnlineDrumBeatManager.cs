@@ -16,7 +16,6 @@ public class OnlineDrumBeatManager : MonoBehaviour
 
     void Update()
     {
-        // 同步开始
         if (OnlineGameManager.Instance != null && OnlineGameManager.Instance.startPlaying && !bgm.isPlaying)
         {
             Debug.Log("DrumBeatManager: StartPlaying detected, starting BGM.");

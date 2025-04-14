@@ -13,11 +13,20 @@ public class SongPlayingManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject);
         }
-        else
+        else if (Instance != this)
         {
             Destroy(gameObject);
+        }
+    }
+
+    public static void EnsureExists()
+    {
+        if (Instance == null)
+        {
+            GameObject go = new GameObject("SongPlayingManager");
+            go.AddComponent<SongPlayingManager>();
         }
     }
 

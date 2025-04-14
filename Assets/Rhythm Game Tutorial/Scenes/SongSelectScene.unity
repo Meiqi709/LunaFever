@@ -435,7 +435,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dcd10144a9830474abeddac594da1f69, type: 2}
   - {fileID: 11400000, guid: 44e5936525bb4a64cbcab6b5ec8b5baf, type: 2}
   - {fileID: 11400000, guid: 1691d1dea982f46408f78cc4ce7e510e, type: 2}
-  - {fileID: 11400000, guid: fd5d41cd7dc14de48ba5711322f12356, type: 2}
   scrollRect: {fileID: 1861251434}
   contentBoxHorizontal: {fileID: 9184644121344510433}
   carouselEntryPrefab: {fileID: 8437886920835927091, guid: 4e2c1022a75f73b48a62f70ffeea5b78, type: 3}
@@ -563,80 +562,16 @@ PrefabInstance:
     - target: {fileID: 6743330543132910232, guid: 1873ef3d6fae6f54ea51aebd18616237, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 7759969399328860483}
+      objectReference: {fileID: 8391198626645424938, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
+    - target: {fileID: 6743330543132910232, guid: 1873ef3d6fae6f54ea51aebd18616237, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMainMenuScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1873ef3d6fae6f54ea51aebd18616237, type: 3}
---- !u!1001 &7759969399328860482
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3753918034685835799, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
-      propertyPath: m_Name
-      value: SongPlayingManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 5883124074747478690, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5883124074747478690, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5883124074747478690, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5883124074747478690, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5883124074747478690, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5883124074747478690, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5883124074747478690, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5883124074747478690, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5883124074747478690, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5883124074747478690, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
---- !u!114 &7759969399328860483 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8391198626645424938, guid: ab34b96db4496fd47b29fef52c0750c7, type: 3}
-  m_PrefabInstance: {fileID: 7759969399328860482}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4b786ce145f6bf41b5b74685dd5604a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &9184644121344510432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -884,4 +819,3 @@ SceneRoots:
   - {fileID: 1425579751}
   - {fileID: 1457588789}
   - {fileID: 9615116}
-  - {fileID: 7759969399328860482}

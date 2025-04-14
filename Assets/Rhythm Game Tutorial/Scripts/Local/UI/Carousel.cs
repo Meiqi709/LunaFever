@@ -4,8 +4,7 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
 
-namespace Christina.UI
-{
+
     public class Carousel : MonoBehaviour, IEndDragHandler
     {
         [Header("Parts Setup")]
@@ -157,4 +156,3 @@ namespace Christina.UI
                 ScrollToSpecificIndex(_currentIndex);
         }
     }
-}
